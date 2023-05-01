@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: artem4es/apiyamdb:latest
+    image: artem4es/apiyamdb:v1
     restart: always
     volumes:
       - static_value:/app/static/

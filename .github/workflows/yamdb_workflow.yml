@@ -29,15 +29,15 @@ jobs:
         # Напечатать текущую директорию 
         pwd
         # файлы внутри
-        ls
+      
         python -m flake8
-        cd ..
+
         ls
-        pwd
-        
-
-
+        ls ..
+        ls yamdb_final
         pytest
+
+
         # # перейти в папку, содержащую manage.py — 
         # #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
         # cd yamdb_final/
