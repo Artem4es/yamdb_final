@@ -34,7 +34,7 @@ jobs:
 
         ls
         ls ..
-        ls yamdb_final
+        
         pytest
 
 
