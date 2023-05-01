@@ -26,9 +26,13 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         # запуск проверки проекта по flake8
-        python -m flake8
         # Напечатать текущую директорию 
-        ls -al
+        pwd
+        # файлы внутри
+        ls
+        python -m flake8
+        
+
 
         pytest
         # # перейти в папку, содержащую manage.py — 
