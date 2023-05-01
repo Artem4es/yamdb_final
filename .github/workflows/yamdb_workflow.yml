@@ -32,6 +32,7 @@ jobs:
         ls
         python -m flake8
         cd ..
+        ls
         pwd
         
 
