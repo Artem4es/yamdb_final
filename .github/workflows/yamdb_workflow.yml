@@ -33,6 +33,10 @@ jobs:
       runs-on: ubuntu-latest
       needs: tests
       steps:
+        - name: Проверка директории
+          run:
+            ls
+            pwd 
         - name: Check out the repo
           # Проверка доступности репозитория Docker Hub для workflow
           uses: actions/checkout@v2 
@@ -47,9 +51,6 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
         - name: Push to Docker Hub
           # Пуш образа в Docker Hub 
-          run:
-            ls
-            pwd 
           uses: docker/build-push-action@v2
           with:
             push: true
