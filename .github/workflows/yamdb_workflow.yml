@@ -28,7 +28,8 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         # Напечатать текущую директорию 
-        pwd
+        ls -al
+
         pytest
         # # перейти в папку, содержащую manage.py — 
         # #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
