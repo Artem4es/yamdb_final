@@ -20,8 +20,8 @@ jobs:
         # установка flake8 и pytest
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort pytest
         # установка зависимостей
-        cd yamdb_final/api_yamdb/
-        pip install -r requirements.txt 
+        
+        pip install -r api_yamdb/requirements.txt
 
     - name: Test with flake8 and django tests
       run: |
