@@ -34,7 +34,7 @@ jobs:
       needs: tests
       steps:
         - name: Проверка директории
-          run:
+          run: |
             ls
             pwd 
         - name: Check out the repo
