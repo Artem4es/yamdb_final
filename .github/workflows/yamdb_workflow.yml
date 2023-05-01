@@ -50,7 +50,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: artem4es/apiyamdb:v1
+            tags: artem4es/apiyamdb:latest
             path: api_yamdb
             
   deploy:
