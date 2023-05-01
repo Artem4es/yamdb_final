@@ -51,7 +51,7 @@ jobs:
           with:
             push: true
             tags: artem4es/apiyamdb:v1
-            # context: . # текущая директория проекта
+            path: api_yamdb
             # dockerfile: ./api_yamdb/Dockerfile # путь к Dockerfile относительно context   
   deploy:
       runs-on: ubuntu-latest
