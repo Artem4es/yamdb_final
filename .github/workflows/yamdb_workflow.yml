@@ -20,7 +20,6 @@ jobs:
         # установка flake8 и pytest
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort pytest
         # установка зависимостей
-        
         pip install -r api_yamdb/requirements.txt
 
     - name: Test with flake8 and django tests
@@ -51,7 +50,7 @@ jobs:
           with:
             push: true
             file: ./api_yamdb/Dockerfile
-            tags: artem4es/apiyamdb:latest
+            tags: ${{ secrets.DOCKER_USERNAME }}/apiyamdb:latest
             
   deploy:
       runs-on: ubuntu-latest
@@ -84,4 +83,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} успешно выполнен!       
+        message: ${{ github.workflow }} успешно выполнен!
