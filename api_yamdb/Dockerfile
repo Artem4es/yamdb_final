@@ -10,4 +10,4 @@ COPY /api_yamdb .
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
 
-RUN python manage.py collectstatic --noinput
+RUN python3 api_yamdb/manage.py collectstatic --noinput
