@@ -9,3 +9,5 @@ RUN pip install -r requirements.txt --no-cache-dir
 COPY /api_yamdb .
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
+
+RUN python3 manage.py collectstatic --noinput
