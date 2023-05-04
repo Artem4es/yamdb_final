@@ -10,13 +10,12 @@ services:
 
   web:
     image: artem4es/apiyamdb:latest
-    # build: ../api_yamdb/
     restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
       - type: bind
-        source: data/redoc.yaml
+        source: redoc.yaml
         target: /app/static/redoc.yaml
     depends_on:
       - db
