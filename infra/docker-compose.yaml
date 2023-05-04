@@ -3,8 +3,6 @@ version: '3.8'
 services:
   db:
     image: postgres:13.0-alpine
-    # ports:
-    #   - "5432:5432"
     volumes:
       - db_value:/var/lib/postgresql/data/
     env_file:
@@ -12,10 +10,14 @@ services:
 
   web:
     image: artem4es/apiyamdb:latest
+    # build: ../api_yamdb/
     restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
+      - type: bind
+        source: static/redoc.yaml
+        target: /app/static/redoc.yaml
     depends_on:
       - db
     env_file:
