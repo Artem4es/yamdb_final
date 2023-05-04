@@ -14,9 +14,6 @@ services:
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
-      - type: bind
-        source: /redoc.yaml
-        target: /app/static/redoc.yaml
     depends_on:
       - db
     env_file:
